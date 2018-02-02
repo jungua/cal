@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>방부장</title>
+<link href="css/bb_font.css" rel="stylesheet" type="text/css" >
+<link href="css/bb_default.css" rel="stylesheet" type="text/css">
+<link href="css/bb_cal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="http://m.bbjang.com/assets/js/cropper/cropper.min.css">
+</head>
+<body>
+<div id="wrap">
+    <div id="header" class="ht_45 bg_cal_blue header_f">
+        <div class="btn_clse">
+            <a href="javascript:void(0);" onclick="cl.goBack()"></a>
+        </div>
+        <h1 class="header_txt2">계산 결과</h1>
+    </div>
+    <div id="container" class="mg_contents2">
+        <div class="cal_sett_box">
+            <table cellspacing="0" cellpadding="0" class="result_thead">
+                <tr>
+                    <th class="th_num">순서</th> 
+                    <th class="th_contents">내용</th>
+                    <th class="th_sum">금액(설명)</th>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" class="result_table"> 
+                <tr>
+                    <td class="th_num">1</td>
+                    <td class="th_contents">취득가</td>
+                    <td class="th_sum">100,000,000</td>
+                </tr>
+                <tr>
+                    <td class="th_num">2</td>
+                    <td class="th_contents">취득일자</td>
+                    <td class="th_sum">2019-09-09</td>
+                </tr> 
+                <tr>
+                    <td class="th_num">3</td>
+                    <td class="th_contents">양도가</td>
+                    <td class="th_sum">300,000,000</td>
+                </tr> 
+                <tr>
+                    <td class="th_num">4</td>
+                    <td class="th_contents">양도일자</td>
+                    <td class="th_sum">2023-09-09</td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">5</td>
+                    <td class="th_contents txt_red">양도차익</td>
+                    <td class="th_sum">
+                        <span class="txt_red">200,000,000</span>
+                        <p class="sub_txt">※ 양도가-취득가-소요경비</p>
+                    </td>
+                </tr>
+                <tr class="sum_4">
+                    <td class="th_num">6</td>
+                    <td class="th_contents">과세대상 양도차익</td>
+                    <td class="th_sum">50,000
+                        <p class="sub_txt">※1가구 1주택 9억초과:<br>양도차익X(양도가액-9억원)/<br>양도가액</p>
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" class="result_table">
+                <tr class="sum_2">
+                    <td class="th_num">7</td>
+                    <td class="th_contents">보유기간</td>
+                    <td class="th_sum">4년 0개월
+                        <p class="sub_txt">※ 양도일-취득일</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">8</td>
+                    <td class="th_contents">장기보유 특별공제액</td>
+                    <td class="th_sum">24,000,000
+                        <p class="sub_txt">※ 공제율(4년 12%)</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">9</td>
+                    <td class="th_contents">양도소득금액<br>(과세표준)</td>
+                    <td class="th_sum">176,000,000
+                        <p class="sub_txt">※ 양도차익-장기보유 특별공제액</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">10</td>
+                    <td class="th_contents">인별 양도소득금액</td>
+                    <td class="th_sum">88,000,000
+                        <p class="sub_txt">※ 공동명의1/2</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">11</td>
+                    <td class="th_contents">기본공제 후 양도소득금액(과세표준)</td>
+                    <td class="th_sum">85,500,000
+                        <p class="sub_txt">※연1회 인별 250만원 공제</p>
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" class="result_table">
+                <tr class="sum_3">
+                    <td class="th_num">12</td>
+                    <td class="th_contents">양도소득세율</td>
+                    <td class="th_sum">24%
+                        <p class="sub_txt">※ 과세표준 4,600만 초과<br>8,800만 이하 : 24%</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">13</td>
+                    <td class="th_contents">중과세 적용 후 세율</td>
+                    <td class="th_sum">34%
+                        <p class="sub_txt">※ 투기지역 3주택 이상 10% 가산</p>
+                    </td>
+                </tr>
+                <tr class="sum_3">
+                    <td class="th_num">14</td>
+                    <td class="th_contents txt_red">양도소득세</td>
+                    <td class="th_sum">
+                        <span class="txt_red">23,870,000</span>
+                        <p class="sub_txt">※ 과세표준X세율(34%)-<br>누진공제액(522만원)</p>
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" class="result_table">
+                <tr class="sum_2">
+                    <td class="th_num">15</td>
+                    <td class="th_contents">주민세</td>
+                    <td class="th_sum">2,387,000
+                        <p class="sub_txt">※ 양도소득세의 10%</p>
+                    </td>
+                </tr>
+                <tr class="sum_2">
+                    <td class="th_num">16</td>
+                    <td class="th_contents">인별 납부금액</td>
+                    <td class="th_sum">26,257,000
+                        <p class="sub_txt">※ 공동명의 2인기준</p>
+                    </td>
+                </tr>     
+            </table>
+            <div class="result_money">
+                <p class="result_txt">총 납입금액 : <span class="txt_red">52,514,000 원 </span>(양도소득세 +주민세)</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>방부장</title>
+<link href="css/bb_font.css" rel="stylesheet" type="text/css" >
+<link href="css/bb_default.css" rel="stylesheet" type="text/css">
+<link href="css/bb_cal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="http://m.bbjang.com/assets/js/cropper/cropper.min.css">
+</head>
+<body>
+<div id="wrap">
+    <div id="header" class="ht_45 bg_cal_blue header_f">
+        <div class="btn_back">
+            <a href="javascript:void(0);" onclick="cl.goBack()"></a>
+        </div>
+        <h1 class="header_txt2">양도세 계산기</h1>
+    </div>
+    <div id="container" class="mg_contents">
+        <div class="cal_sett_box">
+            <ul class="tab_ul">
+                <li class="tab_on tab_a" id="tab_0">
+                    <a href="#" class="tab_st">주택</a>
+                </li>
+                <li class="tab_off tab_b" id="tab_1">
+                    <a href="#" class="tab_st">분양권</a>
+                </li>
+                <li class="tab_off tab_c" id="tab_2">
+                    <a href="#" class="tab_st">비사업용 토지</a>
+                </li>
+                <li class="tab_off tab_d" id="tab_3">
+                    <a href="#" class="tab_st">기타 부동산</a>
+                </li>
+            </ul>
+            <div class="wrap_write">
+                <div class="selec_li">
+                    <div class="tit_txt">
+                            <span>소유한 주택수</span>를 선택하세요
+                            <p class="tit_sub">(※ 일시적 2주택은 1주택을 선택하세요)</p>
+                            <div class="btn_qt">
+                                <a href="#"></a>    
+                            </div>
+                    </div>
+                    <ul>
+                        <li class="radio_33 radio_st font_st">
+                            <input type="radio" name="slc_rd" id="radio_01" checked>
+                            <label for="radio_01"><span>1주택</span></label>   
+                        </li>
+                        <li class="radio_33 radio_st font_st">
+                            <input type="radio" name="slc_rd" id="radio_02">
+                            <label for="radio_02"><span>2주택</span></label>
+                        </li>
+                        <li class="radio_33 radio_st font_st">
+                            <input type="radio" name="slc_rd" id="radio_03">
+                            <label for="radio_03"><span>3주택</span></label>         
+                        </li>    
+                    </ul>    
+                </div>
+                <div class="selec_li">
+                    <div class="tit_txt">
+                            <span>물건이 위치한 지역</span>을 선택하세요
+                            <div class="btn_qt">
+                                <a href="#"></a>    
+                            </div>
+                    </div>
+                    <ul>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd2" id="radio_04" checked>
+                            <label for="radio_04"><span>일반지역</span></label>   
+                        </li>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd2" id="radio_06">
+                            <label for="radio_06"><span>조정대상지역</span></label>         
+                        </li>    
+                    </ul>    
+                </div>
+                <div class="selec_li">
+                    <div class="tit_txt"><span>소유방법</span></div>
+                    <ul>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd3" id="radio_07" checked>
+                            <label for="radio_07"><span>단독명의</span></label>   
+                        </li>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd3" id="radio_08">
+                            <label for="radio_08"><span>공동명의</span></label>
+                        </li>   
+                    </ul>    
+                </div>
+                <div class="selec_li">
+                    <div class="tit_txt">
+                        <span>기본공제</span>
+                        <div class="btn_qt">
+                            <a href="#"></a>    
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd4" id="radio_09" checked>
+                            <label for="radio_09"><span>해당</span></label>   
+                        </li>
+                        <li class="radio_50 radio_st font_st">
+                            <input type="radio" name="slc_rd4" id="radio_10">
+                            <label for="radio_10"><span>비해당</span></label>
+                        </li>   
+                    </ul>    
+                </div>
+            </div>
+            <div class="wrap_table">
+                <ul>
+                    <li>
+                        <span class="table_tit font_st">취득일자</span>
+                        <div class="table_txtbox">
+                            <span class="table_date">2017.01.12</span>
+                            <div class="btn_date"><a href="#"></a></div>
+                        </div>    
+                    </li>
+                    <li>
+                        <span class="table_tit font_st">양도일자</span>
+                        <div class="table_txtbox">
+                            <span class="table_date">2018.12.15</span>
+                            <div class="btn_date"><a href="#"></a></div>
+                        </div>    
+                    </li>
+                </ul>    
+            </div>
+            <!--금액입력전-->
+            <div class="wrap_table">
+                <ul>
+                    <li>
+                        <span class="table_tit font_st">취득가액</span>
+                        <div class="table_inptbox">
+                            <input type="text" name="inpt_money" id="inpt_01" placeholder="금액입력">  
+                        </div>    
+                    </li>
+                    <li>
+                        <span class="table_tit font_st">양도가액</span>
+                        <div class="table_inptbox">
+                            <input type="text" name="inpt_money" id="inpt_01" placeholder="금액입력"> 
+                        </div>     
+                    </li>
+                    <li>
+                        <span class="table_tit font_st">필요경비
+                            <div class="img_qt">
+                                <a href="#"><img src="http://image.bbjang.com/imgs/bbjang/img01/btn_qt.png" width="23" height="23" ></a>
+                            </div>
+                        </span>
+                        <div class="table_inptbox">
+                            <input type="text" name="inpt_money" id="inpt_01" placeholder="금액입력">
+                        </div>     
+                    </li>
+                </ul>    
+            </div>    
+        </div>
+    </div>
+    <div class="fix_btn_box">
+        <a href="#">계산하기</a>
+    </div>
+</div>
+</body>
+</html>
